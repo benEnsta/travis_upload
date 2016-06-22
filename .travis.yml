@@ -1,0 +1,24 @@
+language: c++
+sudo: false
+
+
+addons:
+  apt:
+    sources:
+    - deadsnakes
+    - ubuntu-toolchain-r-test
+    - chef-current-precise
+
+    packages:
+    - cmake
+    - time
+    - pkg-config
+    - g++-4.8
+
+
+# command to run tests
+script:
+  # - git clone -b build_process https://github.com/benEnsta/ibex-robotics.git ibex-robotics
+  - mkdir build
+  - cd build
+  - touch $(date "+%Y%m%d_%H%M%S").txt
