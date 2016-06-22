@@ -5,7 +5,8 @@ script:
 - mkdir build
 - cd build
 # - touch $(date "+%Y%m%d_%H%M%S").txt
-- touch $TRAVIS_BUILD_DIR/myTest.txt
+- echo "AAAZAZAZAZAZA" > $TRAVIS_BUILD_DIR/myTest.txt
+
 deploy:
   skip_cleanup: true
   provider: releases
